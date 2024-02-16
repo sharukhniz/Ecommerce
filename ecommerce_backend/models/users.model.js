@@ -5,15 +5,15 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  userPassword: {
-    type: String,
-    required: true,
-  },
   userEmail: {
     type: String,
     required: true,
     unique: true,
     // match: /^\S+@\S+\.\S+$/,
+  },
+  userPassword: {
+    type: String,
+    required: true,
   },
 });
 
