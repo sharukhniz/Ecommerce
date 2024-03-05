@@ -1,0 +1,91 @@
+.categoryContainer {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.addCategory {
+    display: flex;
+    justify-content: end;
+}
+
+.addCategory button:hover {
+    background-color: rgb(0, 93, 254);
+    color: #FFFFFF;
+
+}
+
+.addCategory button {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 222, 250);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: black
+}
+
+.catBody {
+    border: 1px solid;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.cardContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+    /* width: 300px; */
+    /* height: 300px; */
+    border-radius: 20px;
+
+
+}
+
+.cardDetails {
+    padding: 0 10px 10px 10px;
+    text-align: start;
+    text-align: center;
+}
+
+.cardButtons {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cardButtons button:hover {
+    background-color: rgb(0, 93, 254);
+    color: #FFFFFF;
+
+}
+
+.cardButtons button {
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 222, 250);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: black
+}
+.cardImage{
+    padding: 3px;
+}
+.cardImage img{
+    height: 300px;
+    object-fit: contain;
+}

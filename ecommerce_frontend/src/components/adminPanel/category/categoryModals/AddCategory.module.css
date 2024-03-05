@@ -1,0 +1,11 @@
+.categoryImage{
+    display: none;
+}
+.imageContainer{
+    height: 150px;
+    border: 1px solid;
+}
+
+.addCatBtn{
+    margin-top: 5px;
+}

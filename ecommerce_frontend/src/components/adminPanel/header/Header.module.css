@@ -1,0 +1,51 @@
+.header{
+    background-color: rgb(188, 188, 234);
+    /* height: 50px; */
+    padding: 20px 20px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuBar{
+    display: flex;
+    gap: 10px;
+}
+.headerContainer a{
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 222, 250);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: black
+}
+.headerContainer a:hover{
+    background-color: rgb(0, 93, 254);
+    color: #FFFFFF;
+
+}
+.headerContainer button:hover{
+    background-color: rgb(0, 93, 254);
+    color: #FFFFFF;
+
+}
+.headerContainer button{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(206, 222, 250);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: black
+}

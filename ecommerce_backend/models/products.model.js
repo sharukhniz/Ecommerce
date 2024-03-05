@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
   productImage: {
-    type: String,
+    type: [],
     required: true,
   },
   productTitle: {
@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  productBrand: {
+  productFeatures: {
     type: String,
     required: true,
   },
