@@ -57,9 +57,19 @@ const Category = () => {
     setShowEditModal(true);
   };
 
+  // const handleConfirmUpdate = (categoryName) => {
+  //   try {
+  //     dispatch(updateCategory( categoryName));
+  //     dispatch(getCategory());
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+
   const handleConfirmUpdate = (categoryName) => {
     try {
-      dispatch(updateCategory( categoryName));
+      dispatch(updateCategory({ id: selectedCategoryId, categoryName }));
       dispatch(getCategory());
     } catch (err) {
       console.log(err);
@@ -106,7 +116,7 @@ const Category = () => {
         showUpdateModal={showEditModal}
         handleEditCloseModal={handleEditCloseModal}
         handleConfirmUpdate={handleConfirmUpdate}
-        contactId={selectedCategoryId}
+        categoryId={selectedCategoryId}
       />
       <DeleteCategory
         showDeleteModal={showDeleteModal}

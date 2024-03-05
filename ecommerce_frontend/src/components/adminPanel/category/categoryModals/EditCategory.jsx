@@ -6,7 +6,7 @@ import { getCategory } from "../../../../redux/CategorySlice";
 
 const EditCategory = ({
   showUpdateModal,
-  handleEditCloseModal,
+  handleEditCloseModal,           
   handleConfirmUpdate,
   categoryId,
 }) => {
@@ -28,7 +28,7 @@ const EditCategory = ({
   const handleUpdate = (e) => {
     e.preventDefault();
     dispatch(getCategory());
-    handleConfirmUpdate(categoryId, categoryName);
+    handleConfirmUpdate(categoryName);
     handleEditCloseModal();
   };
 
