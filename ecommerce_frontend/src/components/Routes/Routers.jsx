@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AdminLogin from '../adminPanel/AdminLogin';
 import AdminPanel from "../adminPanel/AdminPanel"
 import Category from '../adminPanel/category/Category';
-import Products from '../adminPanel/category/products/Products';
+import Product from '../adminPanel/category/products/Product';
 
 
 const Router = () => {
@@ -13,7 +13,7 @@ const Router = () => {
       <Route path='admin' element={<AdminLogin />}/>
       <Route path='adminpanel' element={<AdminPanel />}/>
       <Route path='category' element={<Category />}/>
-      <Route path='products' element={<Products />}/>
+      <Route path='product' element={<Product />}/>
 
     </Routes>
     </>

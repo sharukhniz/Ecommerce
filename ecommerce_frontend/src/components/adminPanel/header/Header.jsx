@@ -11,7 +11,7 @@ const Header = () => {
             <div className={style.menuBar}>
               <a href="/adminpanel ">Home</a>
               <a href="/category">Category</a>
-              <a href="/products">Products</a>
+              <a href="/product">Products</a>
               <a href="/">Orders</a>
             </div>
             <div className={style.logout}>

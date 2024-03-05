@@ -1,8 +1,8 @@
 const asyncHandler = require("express-async-handler");
 const categoryService = require("../services/categoryServices");
 
-exports.findCategory = asyncHandler(async (req, res) => {
-  const { categories, totalCount } = await categoryService.findCategory();
+exports.getCategory = asyncHandler(async (req, res) => {
+  const { categories, totalCount } = await categoryService.getCategory();
   res.status(200).json({ categories, totalCount });
 });
 

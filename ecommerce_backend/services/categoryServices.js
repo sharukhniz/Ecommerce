@@ -1,6 +1,6 @@
 const Category = require("../models/categorys.model");
 
-const findCategory = async () => {
+const getCategory = async () => {
   try {
     const categories = await Category.find();
     const totalCount = categories.length;
@@ -48,7 +48,7 @@ const deleteCategory = async (id) => {
 };
 
 module.exports = {
-  findCategory,
+  getCategory,
   createCategory,
   editCategory,
   deleteCategory,

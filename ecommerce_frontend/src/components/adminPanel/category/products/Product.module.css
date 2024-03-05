@@ -1,20 +1,20 @@
-.categoryContainer {
+.productContainer {
     margin-top: 20px;
     padding: 0 20px;
 }
 
-.addCategory {
+.addProduct {
     display: flex;
     justify-content: end;
 }
 
-.addCategory button:hover {
+.addProduct button:hover {
     background-color: rgb(0, 93, 254);
     color: #FFFFFF;
 
 }
 
-.addCategory button {
+.addProduct button {
     border-radius: 5px;
     border: none;
     background-color: rgb(206, 222, 250);
@@ -27,11 +27,11 @@
     color: black
 }
 
-.catBody {
+.productBody {
     border: 1px solid;
     padding: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     margin-top: 10px;
 
@@ -86,6 +86,6 @@
     padding: 3px;
 }
 .cardImage img{
-    height: 300px;
+    height: 168px;
     object-fit: contain;
 }
