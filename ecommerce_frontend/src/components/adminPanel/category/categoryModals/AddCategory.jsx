@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Modal, Button } from "react-bootstrap";
 import {
   addCategory,
@@ -11,6 +11,7 @@ import style from "./AddCategory.module.css";
 
 const AddCategory = () => {
   const [categoryName, setCategoryName] = useState("");
+  const imageRef = useRef(null);
 
   const dispatch = useDispatch();
 
@@ -24,8 +25,26 @@ const AddCategory = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await handleAddCategory({ categoryName });
+    await handleAddCategory({
+      categoryName,
+      categoryImg: imageRef.current.files[0],
+    });
     dispatch(getCategory());
+  };
+
+  const handleImageChange = () => {
+    const chooseFile = document.getElementById("categoryImg");
+    const imgPreview = document.getElementById("addImgPreview");
+    const categoryLabel = document.getElementById("categoryLabel");
+    const files = chooseFile.files[0];
+    if (files) {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(files);
+      fileReader.addEventListener("load", function () {
+        imgPreview.innerHTML = '<img src="' + this.result + '" />';
+        categoryLabel.style.display = "none";
+      });
+    }
   };
 
   return (
@@ -38,13 +57,18 @@ const AddCategory = () => {
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <div className={style.imageContainer}>
-                <label htmlFor="categoryImg">Upload files</label>
+                <label htmlFor="categoryImg" id="categoryLabel">
+                  Upload files
+                </label>
 
                 <input
                   type="file"
                   id="categoryImg"
+                  ref={imageRef}
+                  onChange={handleImageChange}
                   className={style.categoryImage}
                 />
+                <div className={style.addImgPreview} id="addImgPreview"></div>
               </div>
               <label htmlFor="categoryName">Title</label>
               <input

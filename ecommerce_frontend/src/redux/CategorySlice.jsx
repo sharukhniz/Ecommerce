@@ -1,12 +1,26 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// export const getCategory = createAsyncThunk(
+//   "contacts/fetchCategory",
+//   async () => {
+//     try {
+//       const response = await axios.get("http://localhost:3000/categories");
+//       if (!response.data) {
+//         throw new Error('failed to retrive data')
+//     }
+//     return response.data;
+// } catch (error) {
+//     console.error(error, " server error")
+// }
+// })
 export const getCategory = createAsyncThunk(
   "contacts/fetchCategory",
   async () => {
     try {
       const response = await axios.get("http://localhost:3000/categories");
-      return response.data.categories;
+      console.log("hello",response.data.categories);
+      return response.data;
     } catch (error) {
       throw error;
     }
@@ -15,7 +29,11 @@ export const getCategory = createAsyncThunk(
 
 export const addCategory = createAsyncThunk(
   "contacts/addCategory",
-  async (categoryData) => {
+  async (data) => {
+    const categoryData = new FormData();
+    categoryData.append('categoryName',data.categoryName);
+    categoryData.append('categoryImg', data.categoryImg);
+
     try {
       const response = await axios.post(
         "http://localhost:3000/categories",
@@ -30,10 +48,14 @@ export const addCategory = createAsyncThunk(
 );
 export const updateCategory = createAsyncThunk(
   "contacts/updateCategory",
-  async (categoryData) => {
+  async (data) => {
+    const categoryData = new FormData();
+    categoryData.append('categoryName',data.categoryName);
+    categoryData.append('categoryImg', data.categoryImg);
+
     try {
       const response = await axios.put(
-        `http://localhost:3000/categories/${categoryData.id}`,
+        `http://localhost:3000/categories/${data.id}`,
         categoryData
       );
       return response.data;

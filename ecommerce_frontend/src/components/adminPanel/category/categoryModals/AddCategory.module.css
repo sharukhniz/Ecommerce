@@ -4,8 +4,20 @@
 .imageContainer{
     height: 150px;
     border: 1px solid;
+    position: relative;
 }
 
 .addCatBtn{
     margin-top: 5px;
+}
+.addImgPreview img{
+    object-fit: contain;
+    height: 140px;
+}
+.addImgPreview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 150px;
 }

@@ -28,7 +28,7 @@ const Category = () => {
   useEffect(() => {
     dispatch(getCategory());
   }, [dispatch]);
-
+console.log("hello",categorys);
   const handleShowModal = () => {
     dispatch(setShowAddModal(true));
   };
@@ -93,8 +93,7 @@ const Category = () => {
             <div className={style.cardContainer} key={index}>
               <div className={style.cardImage}>
                 <img
-                  src="https://rukminim2.flixcart.com/image/850/1000/kxm5qq80/speaker/home-audio-speaker/4/u/b/best-buy-popularity-high-fidelity-transmission-powerful-sound-original-imagaf6efctwfbam.jpeg?q=90&crop=falseg"
-                  alt="avatar"
+                  src={`http://localhost:3000/${category.categoryImg}`} alt="avatar"
                   style={{ width: "100%" }}
                 />
               </div>
